@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/nba_scoring_leaders'
+require './lib/nba_scoring_leaders.rb'
 
 NBAScoringLeaders::CLI.new.call

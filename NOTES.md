@@ -13,7 +13,7 @@ Building CLI Gem
 CLI
 user types NBA-Scoring-Leaders
 
-shows last 20 years of NBA Scoring Leaders in Reverse Chrono Order
+shows last 10 years of NBA Scoring Leaders in Reverse Chrono Order
 
 2015 - Steph Curry - PPG
 2014 - Kevin Durant - PPG
