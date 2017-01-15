@@ -36,7 +36,12 @@ class NBAScoringLeaders::CLI
     end
   end
 
-def print_scoring_list(years)
+  def print_scoring_list(years)
+    puts ""
+    NBAScoringLeaders::Year.all[years-1, 10].each_with_index(years) do |player, year|
+      puts "#{year} - #{year.player} - #{year.scoring_average}"
+    end
+  end
 
 
 end
