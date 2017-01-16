@@ -32,7 +32,8 @@ class NBAScoringLeaders::CLI
       end
     end
 
+  def nba_years(from_number)
 
-
+  end
 
 end
