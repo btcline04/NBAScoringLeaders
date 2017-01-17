@@ -5,13 +5,12 @@ require 'nba_scoring_leaders/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "nba_scoring_leaders"
-  spec.version       = NBAScoringLeaders::VERSION
+  spec.version       = NbaScoringLeaders::VERSION
   spec.authors       = ["btcline04"]
   spec.email         = ["btcline04@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "A list of the yearly NBA Scoring Leaders."
+  spec.homepage      = "https://github.com/btcline04/NBAScoringLeaders"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

@@ -1,4 +1,4 @@
-class NBAScoringLeaders::Year
+class NbaScoringLeaders::Year
 
   attr_accessor :year, :player, :team, :average, :total_points, :games_played
 
@@ -46,6 +46,5 @@ class NBAScoringLeaders::Year
   # end
 
 
+
 end
-
-

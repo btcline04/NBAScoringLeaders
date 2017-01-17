@@ -1,4 +1,4 @@
-class NBAScoringLeaders::CLI
+class NbaScoringLeaders::CLI
 
   def start
     puts "I'm here to tell you the Yearly NBA Scoring Leaders."
