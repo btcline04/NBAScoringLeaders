@@ -9,48 +9,43 @@ class NBAScoringLeaders::Year
     @player = player
     @team = team
     @average = average
+    @@all << self
   end
 
   def self.all
     @@all
   end
 
-  def scrape_lob
+  def self.scrape_lob
     doc = Nokogiri::HTML(open("http://www.landofbasketball.com/awards/nba_scoring_leader_year.htm"))
     binding.pry
-
-  def year
-
   end
 
-  def player
+  # def year
 
-  end
+  # end
 
-  def team
+  # def player
 
-  end
+  # end
 
-  def average
+  # def team
 
-  end
+  # end
 
-  def total_points
+  # def average
 
-  end
+  # end
 
-  def games_played
+  # def total_points
 
-  end
+  # end
 
+  # def games_played
 
-
-
-
-
-
-
-
+  # end
 
 
 end
+
+
