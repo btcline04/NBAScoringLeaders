@@ -1,10 +1,10 @@
 class NbaScoringLeaders::Scraper
 
-  def self.get_page
+  def get_page
     Nokogiri::HTML(open("http://www.landofbasketball.com/awards/nba_scoring_leader_year.htm"))
   end
 
-  def self.scrape_table_rows
+  def scrape_table_rows
     self.get_page.css("table.color-alt tr").text.strip
   end
 

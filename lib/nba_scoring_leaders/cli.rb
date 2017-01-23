@@ -7,7 +7,8 @@ class NbaScoringLeaders::CLI
 
   def list_scoring_leaders
     puts ""
-    puts "Which years would you like to see first? 1985-1995, 1996-2005, 2006-2015?"
+    puts "Which years would you like to see first? 1946-1955, 1956-1965, 1966-1975, 1976-1985, 1986-1995, 1996-2005, or 2006-2015?"
+    puts ""
     input = gets.strip.to_i
 
     nba_years(input)
@@ -15,8 +16,6 @@ class NbaScoringLeaders::CLI
     puts ""
     puts "Type a year to learn more about that scoring champion."
     input = gets.strip
-
-    year = NBAScoringLeaders::Year.find(input.to_i)
 
     print_year_with_info(year)
 
@@ -33,7 +32,12 @@ class NbaScoringLeaders::CLI
     end
 
   def nba_years(from_number)
-
+    puts ""
+    puts "-------- NBA Scoring Leaders from #{from_number} - #{from_number+9} --------"
+    puts ""
+    NbaScoringLeaders::Year.all[from_number-1, 10].each do |year|
+      puts "#{year.year} - #{year.player} - #{year.team} - #{year.average+ ppg}"
+    end
   end
 
 end
