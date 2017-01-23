@@ -4,12 +4,12 @@ class NbaScoringLeaders::Scraper
     Nokogiri::HTML(open("http://www.landofbasketball.com/awards/nba_scoring_leader_year.htm"))
   end
 
-  def self.scrape_years_index
+  def self.scrape_table_rows
     self.get_page.css("table.color-alt tr").text.strip
   end
 
   def make_years
-    scrape_years_index.each do |tr|
+    scrape_table_rows.each do |tr|
       NbaScoringLeaders::Year.new_from_index(tr)
     end
   end
