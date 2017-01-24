@@ -1,6 +1,8 @@
 class NbaScoringLeaders::CLI
 
   def start
+    NbaScoringLeaders::Scraper.new.make_years
+
     puts "I'm here to tell you the Yearly NBA Scoring Leaders."
     list_scoring_leaders
   end

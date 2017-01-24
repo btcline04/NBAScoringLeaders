@@ -6,12 +6,12 @@ class NbaScoringLeaders::Year
 
   def self.new_from_index(tr)
     self.new(
-      tr.xpath("//tr/td[1]").text.gsub(/-.*/, ""),
-      tr.xpath("//tr/td[2]").text.strip,
-      tr.xpath("//tr/td[4]").text.strip,
-      tr.xpath("//tr/td[5]").text.strip,
-      tr.xpath("//tr/td[6]").text.strip,
-      tr.xpath("//tr/td[7]").text.strip,
+      tr.css("td[1]").text.gsub(/-.*/, ""),
+      tr.css("td[2]").text.strip,
+      tr.css("td[4]").text.strip,
+      tr.css("td[5]").text.strip,
+      tr.css("td[6]").text.strip,
+      tr.css("td[7]").text.strip,
     )
   end
 

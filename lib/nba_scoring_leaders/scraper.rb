@@ -5,7 +5,7 @@ class NbaScoringLeaders::Scraper
   end
 
   def scrape_table_rows
-    self.get_page.css("table.color-alt tr").text.strip
+    get_page.css("table.color-alt tr")
   end
 
   def make_years
