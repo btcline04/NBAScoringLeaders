@@ -2,14 +2,22 @@ class NbaScoringLeaders::CLI
 
   def start
     NbaScoringLeaders::Scraper.new.make_years
-
+    puts ""
     puts "I'm here to tell you the Yearly NBA Scoring Leaders."
     list_scoring_leaders
   end
 
   def list_scoring_leaders
     puts ""
-    puts "Which years would you like to see first? 1946-1955, 1956-1965, 1966-1975, 1976-1985, 1986-1995, 1996-2005, or 2006-2015?"
+    puts "Which years would you like to see first?"
+    puts "
+    Enter  1 for 2006-2015
+    Enter 11 for 1996-2005 
+    Enter 21 for 1985-1995
+    Enter 31 for 1976-1985
+    Enter 41 for 1966-1975 
+    Enter 51 for 1956-1965
+    Enter 61 for 1946-1955"
     puts ""
     input = gets.strip.to_i
 
@@ -22,7 +30,7 @@ class NbaScoringLeaders::CLI
     print_year_with_info(year)
 
     puts ""
-    puts "Would you like to learn more about a specific year? Enter Y or N."
+    puts "Would you like to see a different set of scoring champions? Enter Y or N."
     inputs = gets.strip.downcase
       if input == "y"
         start
@@ -37,10 +45,13 @@ class NbaScoringLeaders::CLI
     puts ""
     puts "-------- NBA Scoring Leaders from #{from_number} - #{from_number+9} --------"
     puts ""
-    binding.pry
-    NbaScoringLeaders::Year.all[from_number].each do |year|
+    NbaScoringLeaders::Year.all[from_number-1, 10].each do |year|
       puts "#{year.year} - #{year.player} - #{year.team} - #{year.average}"
     end
+  end
+
+  def print_year_with_info(year)
+
   end
 
 end
