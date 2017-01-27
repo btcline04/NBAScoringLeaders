@@ -10,7 +10,9 @@ class NbaScoringLeaders::Scraper
 
   def make_years
     scrape_table_rows.each do |tr|
-      NbaScoringLeaders::Year.new_from_index(tr)
+      if tr.css("td[7]").text.strip != "" && tr.css("td[7]").text.strip != "Games"
+        NbaScoringLeaders::Year.new_from_index(tr)
+      end
     end
   end
 

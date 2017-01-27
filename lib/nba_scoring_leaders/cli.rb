@@ -37,8 +37,9 @@ class NbaScoringLeaders::CLI
     puts ""
     puts "-------- NBA Scoring Leaders from #{from_number} - #{from_number+9} --------"
     puts ""
-    NbaScoringLeaders::Year.all[from_number-1, 10].each do |year|
-      puts "#{year.year} - #{year.player} - #{year.team} - #{year.average+ ppg}"
+    binding.pry
+    NbaScoringLeaders::Year.all[from_number].each do |year|
+      puts "#{year.year} - #{year.player} - #{year.team} - #{year.average}"
     end
   end
 
