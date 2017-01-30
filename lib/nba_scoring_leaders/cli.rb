@@ -23,20 +23,21 @@ class NbaScoringLeaders::CLI
 
     nba_years(input)
     
-    puts ""
-    puts "Type a year to learn more about that scoring champion."
-    input = gets.strip
+    # puts ""
+    # puts "Type a year to learn more about that scoring champion."
+    # input = gets.strip
 
-    print_year_with_info(year)
+    # print_year_with_info(year)
 
     puts ""
     puts "Would you like to see a different set of scoring champions? Enter Y or N."
-    inputs = gets.strip.downcase
+    input = gets.strip.downcase
       if input == "y"
         start
       else
         puts ""
         puts "Cool - your new knowledge of NBA trivia will easily impress all of your friends."
+        puts ""
         exit
       end
     end
