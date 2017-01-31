@@ -1,4 +1,4 @@
-# NBAScoringLeaders
+# NBA Scoring Leaders
 
 This is a Ruby gem dedicated to providing a CLI with statistics and information about the yearly NBA scoring leaders dating back to the 1946-47 NBA season. 
 
@@ -8,7 +8,7 @@ This is a Ruby gem dedicated to providing a CLI with statistics and information 
 
 ## Usage
 
-TODO: Write usage instructions here
+Type nba-scoring-leaders into your terminal & follow the prompts on the CLI to increase your knowledge of NBA yearly statistics.
 
 ## Development
 
@@ -19,7 +19,6 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/NBAScoringLeaders. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
 
 ## License
 

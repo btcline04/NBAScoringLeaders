@@ -6,21 +6,12 @@ require 'nba_scoring_leaders/version'
 Gem::Specification.new do |spec|
   spec.name          = "nba-scoring-leaders"
   spec.version       = NbaScoringLeaders::VERSION
-  spec.authors       = ["btcline04"]
+  spec.date          = '2017-01-31'
+  spec.authors       = ["Brett Cline"]
   spec.email         = ["btcline04@gmail.com"]
-
   spec.summary       = "A list of the yearly NBA Scoring Leaders."
   spec.homepage      = "https://github.com/btcline04/NBAScoringLeaders"
   spec.license       = "MIT"
-
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
