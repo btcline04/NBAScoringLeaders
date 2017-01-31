@@ -54,6 +54,7 @@ class NbaScoringLeaders::CLI
     end
   end
 
+  # grabs information from Year objects and displays them to the command line
   def print_year_with_info(year)
     puts ""
     puts "In #{year.year}, #{year.player} scored #{year.total_points} total points in #{year.games_played} total games."
