@@ -8,6 +8,7 @@ class NbaScoringLeaders::Scraper
     get_page.css("table.color-alt tr")
   end
 
+  #scrape html table rows, push scraped data to new_from_index method if the table cells aren't empty
   def make_years
     scrape_table_rows.each do |tr|
       if tr.css("td[7]").text.strip != "" && tr.css("td[7]").text.strip != "Games"
@@ -17,8 +18,3 @@ class NbaScoringLeaders::Scraper
   end
 
 end
-
-
-# all players = doc.css("div.rd-tbl-2 tr td[2]").text.strip
-# all years = doc.css("div.rd-tbl-2 tr td[1]").text.strip
-# table w/ all information = doc.css("table.color-alt tr").text.strip

@@ -4,6 +4,7 @@ class NbaScoringLeaders::Year
 
   @@all = []
 
+  # new Year instances using scraped data & initialized w/ instance variables listed below
   def self.new_from_index(tr)
     self.new(
       tr.css("td[1]").text.gsub(/-.*/, ""),
@@ -16,7 +17,7 @@ class NbaScoringLeaders::Year
   end
 
   def initialize(year = nil, player = nil, team = nil, average = nil, total_points = nil, games_played = nil)
-    @year = year
+    @year = year.to_i
     @player = player
     @team = team
     @average = average
@@ -28,5 +29,9 @@ class NbaScoringLeaders::Year
   def self.all
     @@all
   end
+
+  def self.year_with_info(year)
+      @@all.find {|x| x.year == year}
+      end
 
 end
