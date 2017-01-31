@@ -47,7 +47,7 @@ class NbaScoringLeaders::CLI
   # access the array w/ scraped NBA data and use input to grab that index plus the following 9 indices to print to the command line
   def nba_years(from_number)
     puts ""
-    puts "-------- NBA Scoring Leaders from #{from_number} - #{from_number+9} --------"
+    puts "-------- NBA Scoring Leaders --------"
     puts ""
     NbaScoringLeaders::Year.all[from_number-1, 10].each do |year|
       puts "#{year.year} - #{year.player} - #{year.team} - #{year.average} ppg"
