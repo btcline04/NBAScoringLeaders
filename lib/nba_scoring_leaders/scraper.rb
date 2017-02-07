@@ -8,11 +8,18 @@ class NbaScoringLeaders::Scraper
     get_page.css("table.color-alt tr")
   end
 
-  #scrape html table rows, push scraped data to new_from_index method if the table cells aren't empty
+  #scrape html table rows, create new Year instances using scraped data & initialized w/ instance variables listed below
   def make_years
     scrape_table_rows.each do |tr|
       if tr.css("td[7]").text.strip != "" && tr.css("td[7]").text.strip != "Games"
-        NbaScoringLeaders::Year.new_from_index(tr)
+       NbaScoringLeaders::Year.new(
+        tr.css("td[1]").text.gsub(/-.*/, ""),
+        tr.css("td[2]").text.strip,
+        tr.css("td[4]").text.strip,
+        tr.css("td[5]").text.strip,
+        tr.css("td[6]").text.strip,
+        tr.css("td[7]").text.strip,
+      )
       end
     end
   end
